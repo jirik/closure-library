@@ -96,7 +96,7 @@ goog.result.SimpleResult.HandlerEntry_;
  * @deprecated Use {@link goog.Promise} instead - http://go/promisemigration
  */
 goog.result.SimpleResult.StateError = function() {
-  goog.result.SimpleResult.StateError.base(this, 'constructor',
+  goog.base(this,
       'Multiple attempts to set the state of this Result');
 };
 goog.inherits(goog.result.SimpleResult.StateError, goog.debug.Error);

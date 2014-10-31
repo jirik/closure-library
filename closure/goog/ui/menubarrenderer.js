@@ -33,7 +33,7 @@ goog.require('goog.ui.ContainerRenderer');
  * @final
  */
 goog.ui.MenuBarRenderer = function() {
-  goog.ui.MenuBarRenderer.base(this, 'constructor',
+  goog.base(this,
       goog.a11y.aria.Role.MENUBAR);
 };
 goog.inherits(goog.ui.MenuBarRenderer, goog.ui.ContainerRenderer);

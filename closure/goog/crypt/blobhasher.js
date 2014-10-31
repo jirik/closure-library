@@ -49,7 +49,7 @@ goog.require('goog.log');
  * @final
  */
 goog.crypt.BlobHasher = function(hashFn, opt_blockSize) {
-  goog.crypt.BlobHasher.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * The actual hash function.

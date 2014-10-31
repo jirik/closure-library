@@ -254,7 +254,7 @@ goog.ui.equation.TexPane.prototype.enterDocument = function() {
 
 /** @override */
 goog.ui.equation.TexPane.prototype.setVisible = function(visible) {
-  goog.ui.equation.TexPane.base(this, 'setVisible', visible);
+  goog.base(this, 'setVisible', visible);
   if (visible) {
     goog.Timer.callOnce(this.focusTexEdit_, 0, this);
   }
@@ -441,5 +441,5 @@ goog.ui.equation.TexPane.prototype.setEquation =
 goog.ui.equation.TexPane.prototype.disposeInternal = function() {
   this.texInputHandler_.dispose();
   this.paletteManager_ = null;
-  goog.ui.equation.TexPane.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };

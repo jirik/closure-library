@@ -1,3 +1,7 @@
+This is slighly changed Closure Library (release 1005c9e1ff:
+https://github.com/google/closure-library/tree/1005c9e1fffba34370b15eeb035be93d765c1676
+), so that it can be used with Plovr (release 81ed862).
+
 Closure Library is a powerful, low level JavaScript library designed
 for building complex and scalable web applications. It is used by many
 major Google web applications, such as Gmail and Google Docs.

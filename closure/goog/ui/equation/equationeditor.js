@@ -34,7 +34,7 @@ goog.require('goog.ui.equation.TexPane');
  */
 goog.ui.equation.EquationEditor = function(context, opt_domHelper,
     opt_helpUrl) {
-  goog.ui.equation.EquationEditor.base(this, 'constructor', opt_domHelper);
+  goog.base(this, opt_domHelper);
 
   /**
    * The context this editor runs in.
@@ -75,7 +75,7 @@ goog.ui.equation.EquationEditor.prototype.activeTabIndex_ = 0;
 
 /** @override */
 goog.ui.equation.EquationEditor.prototype.createDom = function() {
-  goog.ui.equation.EquationEditor.base(this, 'createDom');
+  goog.base(this, 'createDom');
   this.createDom_();
 };
 
@@ -217,5 +217,5 @@ goog.ui.equation.EquationEditor.prototype.setEquation = function(equation) {
 /** @override */
 goog.ui.equation.EquationEditor.prototype.disposeInternal = function() {
   this.context_ = null;
-  goog.ui.equation.EquationEditor.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };

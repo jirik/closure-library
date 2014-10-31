@@ -80,14 +80,14 @@ goog.fx.CssSpriteAnimation.prototype.onAnimate = function() {
   var y = -Math.floor(this.coords[1] / this.size_.height) * this.size_.height;
   this.element_.style.backgroundPosition = x + 'px ' + y + 'px';
 
-  goog.fx.CssSpriteAnimation.base(this, 'onAnimate');
+  goog.base(this, 'onAnimate');
 };
 
 
 /** @override */
 goog.fx.CssSpriteAnimation.prototype.onFinish = function() {
   this.play(true);
-  goog.fx.CssSpriteAnimation.base(this, 'onFinish');
+  goog.base(this, 'onFinish');
 };
 
 

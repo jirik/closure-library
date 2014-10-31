@@ -55,7 +55,7 @@ goog.require('goog.ui.SelectionModel');
  * @extends {goog.ui.Control}
  */
 goog.ui.Palette = function(items, opt_renderer, opt_domHelper) {
-  goog.ui.Palette.base(this, 'constructor', items,
+  goog.base(this, items,
       opt_renderer || goog.ui.PaletteRenderer.getInstance(), opt_domHelper);
   this.setAutoStates(goog.ui.Component.State.CHECKED |
       goog.ui.Component.State.SELECTED | goog.ui.Component.State.OPENED, false);
@@ -515,7 +515,7 @@ goog.ui.Palette.prototype.highlightIndex_ = function(index, highlight) {
 
 /** @override */
 goog.ui.Palette.prototype.setHighlighted = function(highlight) {
-  goog.ui.Palette.base(this, 'setHighlighted', highlight);
+  goog.base(this, 'setHighlighted', highlight);
   if (highlight && this.highlightedIndex_ == -1) {
     // If there was a last highlighted index, use that. Otherwise, highlight the
     // first cell.
@@ -585,7 +585,7 @@ goog.ui.Palette.prototype.adjustSize_ = function() {
  * @private
  */
 goog.ui.Palette.CurrentCell_ = function() {
-  goog.ui.Palette.CurrentCell_.base(this, 'constructor', null);
+  goog.base(this, null);
   this.setDispatchTransitionEvents(goog.ui.Component.State.HOVER, true);
 };
 goog.inherits(goog.ui.Palette.CurrentCell_, goog.ui.Control);

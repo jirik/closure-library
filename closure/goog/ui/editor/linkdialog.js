@@ -55,7 +55,7 @@ goog.require('goog.window');
  * @final
  */
 goog.ui.editor.LinkDialog = function(domHelper, link) {
-  goog.ui.editor.LinkDialog.base(this, 'constructor', domHelper);
+  goog.base(this, domHelper);
   this.targetLink_ = link;
 
   /**
@@ -92,7 +92,7 @@ goog.ui.editor.LinkDialog.EventType = {
  */
 goog.ui.editor.LinkDialog.OkEvent = function(
     linkText, linkUrl, openInNewWindow, noFollow) {
-  goog.ui.editor.LinkDialog.OkEvent.base(this, 'constructor',
+  goog.base(this,
       goog.ui.editor.AbstractDialog.EventType.OK);
 
   /**
@@ -132,7 +132,7 @@ goog.inherits(goog.ui.editor.LinkDialog.OkEvent, goog.events.Event);
  * @final
  */
 goog.ui.editor.LinkDialog.BeforeTestLinkEvent = function(url) {
-  goog.ui.editor.LinkDialog.BeforeTestLinkEvent.base(this, 'constructor',
+  goog.base(this,
       goog.ui.editor.LinkDialog.EventType.BEFORE_TEST_LINK);
 
   /**
@@ -217,7 +217,7 @@ goog.ui.editor.LinkDialog.prototype.showRelNoFollow = function() {
 
 /** @override */
 goog.ui.editor.LinkDialog.prototype.show = function() {
-  goog.ui.editor.LinkDialog.base(this, 'show');
+  goog.base(this, 'show');
 
 
   this.selectAppropriateTab_(this.textToDisplayInput_.value,
@@ -243,7 +243,7 @@ goog.ui.editor.LinkDialog.prototype.show = function() {
 /** @override */
 goog.ui.editor.LinkDialog.prototype.hide = function() {
   this.disableAutogenFlag_(false);
-  goog.ui.editor.LinkDialog.base(this, 'hide');
+  goog.base(this, 'hide');
 };
 
 
@@ -350,7 +350,7 @@ goog.ui.editor.LinkDialog.prototype.disposeInternal = function() {
   this.emailInputHandler_.dispose();
   this.emailInputHandler_ = null;
 
-  goog.ui.editor.LinkDialog.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };
 
 

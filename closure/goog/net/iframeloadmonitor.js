@@ -42,7 +42,7 @@ goog.require('goog.userAgent');
  * @final
  */
 goog.net.IframeLoadMonitor = function(iframe, opt_hasContent) {
-  goog.net.IframeLoadMonitor.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * Iframe whose load state is monitored by this IframeLoadMonitor

@@ -37,7 +37,7 @@ goog.require('goog.fs.ProgressEvent');
  * @final
  */
 goog.fs.FileReader = function() {
-  goog.fs.FileReader.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * The underlying FileReader object.
@@ -166,7 +166,7 @@ goog.fs.FileReader.prototype.dispatchProgressEvent_ = function(event) {
 
 /** @override */
 goog.fs.FileReader.prototype.disposeInternal = function() {
-  goog.fs.FileReader.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
   delete this.reader_;
 };
 

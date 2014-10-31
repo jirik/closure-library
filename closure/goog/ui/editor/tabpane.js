@@ -44,7 +44,7 @@ goog.require('goog.ui.TabBar');
  * @final
  */
 goog.ui.editor.TabPane = function(dom, opt_caption) {
-  goog.ui.editor.TabPane.base(this, 'constructor', dom);
+  goog.base(this, dom);
 
   /**
    * The event handler used to register events.
@@ -154,7 +154,7 @@ goog.ui.editor.TabPane.prototype.addTab = function(id, caption, tooltip,
 
 /** @override */
 goog.ui.editor.TabPane.prototype.enterDocument = function() {
-  goog.ui.editor.TabPane.base(this, 'enterDocument');
+  goog.base(this, 'enterDocument');
 
   // Get the root element and add a class name to it.
   var root = this.getElement();

@@ -35,7 +35,7 @@ goog.require('goog.testing.asserts');
  * @final
  */
 goog.testing.messaging.MockMessageChannel = function(mockControl) {
-  goog.testing.messaging.MockMessageChannel.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * Whether the channel has been disposed.

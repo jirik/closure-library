@@ -99,7 +99,7 @@ goog.ui.SelectionMenuButton.prototype.initialItemRenderer_;
  * @override
  */
 goog.ui.SelectionMenuButton.prototype.setEnabled = function(enable) {
-  goog.ui.SelectionMenuButton.base(this, 'setEnabled', enable);
+  goog.base(this, 'setEnabled', enable);
   this.setCheckboxEnabled(enable);
 };
 

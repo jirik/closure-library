@@ -58,7 +58,7 @@ goog.require('goog.ui.registry');
  */
 goog.ui.Select = function(opt_caption, opt_menu, opt_renderer, opt_domHelper,
     opt_menuRenderer) {
-  goog.ui.Select.base(this, 'constructor',
+  goog.base(this,
       opt_caption, opt_menu, opt_renderer, opt_domHelper,
       opt_menuRenderer ||
           new goog.ui.MenuRenderer(goog.a11y.aria.Role.LISTBOX));
@@ -139,7 +139,7 @@ goog.ui.Select.prototype.disposeInternal = function() {
  */
 goog.ui.Select.prototype.handleMenuAction = function(e) {
   this.setSelectedItem(/** @type {goog.ui.MenuItem} */ (e.target));
-  goog.ui.Select.base(this, 'handleMenuAction', e);
+  goog.base(this, 'handleMenuAction', e);
 
   // NOTE(user): We should not stop propagation and then fire
   // our own ACTION event. Fixing this without breaking anyone

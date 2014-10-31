@@ -68,7 +68,7 @@ goog.require('goog.object');
  * @final
  */
 goog.net.FileDownloader = function(dir, opt_pool) {
-  goog.net.FileDownloader.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * The directory in which the downloaded files are stored.
@@ -600,7 +600,7 @@ goog.net.FileDownloader.prototype.disposeInternal = function() {
   goog.dispose(this.pool_);
   delete this.pool_;
 
-  goog.net.FileDownloader.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };
 
 
@@ -673,7 +673,7 @@ goog.net.FileDownloader.Error.prototype.fileError;
  * @private
  */
 goog.net.FileDownloader.Download_ = function(url, downloader) {
-  goog.net.FileDownloader.Download_.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * The URL for the file being downloaded.
@@ -742,5 +742,5 @@ goog.net.FileDownloader.Download_.prototype.disposeInternal = function() {
     this.writer.abort();
   }
 
-  goog.net.FileDownloader.Download_.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };

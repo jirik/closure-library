@@ -546,7 +546,7 @@ goog.testing.fs.DirectoryEntry.prototype.createPath =
  * @final
  */
 goog.testing.fs.FileEntry = function(fs, parent, name, data, opt_type) {
-  goog.testing.fs.FileEntry.base(this, 'constructor', fs, parent, name);
+  goog.base(this, fs, parent, name);
 
   /**
    * The internal file blob referenced by this file entry.

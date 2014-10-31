@@ -444,7 +444,7 @@ goog.ui.Menu.prototype.handleKeyEventInternal = function(e) {
 
 /** @override */
 goog.ui.Menu.prototype.setHighlightedIndex = function(index) {
-  goog.ui.Menu.base(this, 'setHighlightedIndex', index);
+  goog.base(this, 'setHighlightedIndex', index);
 
   // Bring the highlighted item into view. This has no effect if the menu is not
   // scrollable.

@@ -63,7 +63,7 @@ goog.require('goog.userAgent');
  * @extends {goog.ui.Component}
  */
 goog.ui.ModalPopup = function(opt_useIframeMask, opt_domHelper) {
-  goog.ui.ModalPopup.base(this, 'constructor', opt_domHelper);
+  goog.base(this, opt_domHelper);
 
   /**
    * Whether the modal popup should use an iframe as the background
@@ -200,7 +200,7 @@ goog.ui.ModalPopup.prototype.getBackgroundElement = function() {
  */
 goog.ui.ModalPopup.prototype.createDom = function() {
   // Create the modal popup element, and make sure it's hidden.
-  goog.ui.ModalPopup.base(this, 'createDom');
+  goog.base(this, 'createDom');
 
   var element = this.getElement();
   goog.asserts.assert(element);
@@ -308,7 +308,7 @@ goog.ui.ModalPopup.prototype.canDecorate = function(element) {
 /** @override */
 goog.ui.ModalPopup.prototype.decorateInternal = function(element) {
   // Decorate the modal popup area element.
-  goog.ui.ModalPopup.base(this, 'decorateInternal', element);
+  goog.base(this, 'decorateInternal', element);
   var allClasses = goog.string.trim(this.getCssClass()).split(' ');
 
   goog.dom.classlist.addAll(
@@ -327,7 +327,7 @@ goog.ui.ModalPopup.prototype.decorateInternal = function(element) {
 /** @override */
 goog.ui.ModalPopup.prototype.enterDocument = function() {
   this.renderBackground_();
-  goog.ui.ModalPopup.base(this, 'enterDocument');
+  goog.base(this, 'enterDocument');
 
   goog.dom.insertSiblingAfter(this.tabCatcherElement_, this.getElement());
 
@@ -351,7 +351,7 @@ goog.ui.ModalPopup.prototype.exitDocument = function() {
 
   goog.dispose(this.focusHandler_);
 
-  goog.ui.ModalPopup.base(this, 'exitDocument');
+  goog.base(this, 'exitDocument');
   goog.dom.removeNode(this.bgIframeEl_);
   goog.dom.removeNode(this.bgEl_);
   goog.dom.removeNode(this.tabCatcherElement_);
@@ -714,5 +714,5 @@ goog.ui.ModalPopup.prototype.disposeInternal = function() {
   goog.dispose(this.bgHideTransition_);
   this.bgHideTransition_ = null;
 
-  goog.ui.ModalPopup.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };

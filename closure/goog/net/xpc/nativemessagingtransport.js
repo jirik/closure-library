@@ -624,7 +624,7 @@ goog.net.xpc.NativeMessagingTransport.prototype.disposeInternal = function() {
   // this.channel_.peerWindowObject_.
   delete this.send;
 
-  goog.net.xpc.NativeMessagingTransport.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };
 
 

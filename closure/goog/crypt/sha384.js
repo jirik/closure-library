@@ -37,7 +37,7 @@ goog.require('goog.crypt.Sha2_64bit');
  * @struct
  */
 goog.crypt.Sha384 = function() {
-  goog.crypt.Sha384.base(this, 'constructor', 6,
+  goog.base(this, 6,
       // Section 5.3.4 of
       // csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf
       [0xcbbb9d5d, 0xc1059ed8,  // H0

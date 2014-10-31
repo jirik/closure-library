@@ -37,7 +37,7 @@ goog.require('goog.ui.ControlRenderer');
  * @extends {goog.ui.ControlRenderer}
  */
 goog.ui.CheckboxRenderer = function() {
-  goog.ui.CheckboxRenderer.base(this, 'constructor');
+  goog.base(this);
 };
 goog.inherits(goog.ui.CheckboxRenderer, goog.ui.ControlRenderer);
 goog.addSingletonGetter(goog.ui.CheckboxRenderer);
@@ -67,7 +67,7 @@ goog.ui.CheckboxRenderer.prototype.createDom = function(checkbox) {
 goog.ui.CheckboxRenderer.prototype.decorate = function(checkbox, element) {
   // The superclass implementation takes care of common attributes; we only
   // need to set the checkbox state.
-  element = goog.ui.CheckboxRenderer.base(this, 'decorate', checkbox, element);
+  element = goog.base(this, 'decorate', checkbox, element);
   goog.asserts.assert(element);
   var classes = goog.dom.classlist.get(element);
   // Update the checked state of the element based on its css classNames

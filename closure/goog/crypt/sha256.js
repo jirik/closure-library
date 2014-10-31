@@ -37,7 +37,7 @@ goog.require('goog.crypt.Sha2');
  * @struct
  */
 goog.crypt.Sha256 = function() {
-  goog.crypt.Sha256.base(this, 'constructor');
+  goog.base(this);
 };
 goog.inherits(goog.crypt.Sha256, goog.crypt.Sha2);
 

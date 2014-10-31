@@ -35,7 +35,7 @@ goog.require('goog.testing.fs.ProgressEvent');
  * @extends {goog.events.EventTarget}
  */
 goog.testing.fs.FileReader = function() {
-  goog.testing.fs.FileReader.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * The current state of the reader.

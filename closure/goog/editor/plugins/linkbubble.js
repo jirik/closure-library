@@ -43,7 +43,7 @@ goog.require('goog.window');
  * @extends {goog.editor.plugins.AbstractBubblePlugin}
  */
 goog.editor.plugins.LinkBubble = function(var_args) {
-  goog.editor.plugins.LinkBubble.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * List of extra actions supported by the bubble.

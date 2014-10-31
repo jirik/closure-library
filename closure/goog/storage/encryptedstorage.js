@@ -57,7 +57,7 @@ goog.require('goog.storage.mechanism.IterableMechanism');
  * @final
  */
 goog.storage.EncryptedStorage = function(mechanism, secret) {
-  goog.storage.EncryptedStorage.base(this, 'constructor', mechanism);
+  goog.base(this, mechanism);
   this.secret_ = goog.crypt.stringToByteArray(secret);
   this.cleartextSerializer_ = new goog.json.Serializer();
 };
@@ -168,7 +168,7 @@ goog.storage.EncryptedStorage.prototype.set = function(
       this.encryptValue_(salt, key,
                          this.cleartextSerializer_.serialize(value)));
   wrapper[goog.storage.EncryptedStorage.SALT_KEY] = salt;
-  goog.storage.EncryptedStorage.base(this, 'set',
+  goog.base(this, 'set',
       this.hashKeyWithSecret_(key), wrapper, opt_expiration);
 };
 

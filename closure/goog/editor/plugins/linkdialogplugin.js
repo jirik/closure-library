@@ -246,7 +246,7 @@ goog.editor.plugins.LinkDialogPlugin.prototype.execCommandInternal = function(
  * @protected
  */
 goog.editor.plugins.LinkDialogPlugin.prototype.handleAfterHide = function(e) {
-  goog.editor.plugins.LinkDialogPlugin.base(this, 'handleAfterHide', e);
+  goog.base(this, 'handleAfterHide', e);
   this.currentLink_ = null;
 };
 
@@ -307,7 +307,7 @@ goog.editor.plugins.LinkDialogPlugin.prototype.createDialog = function(
 
 /** @override */
 goog.editor.plugins.LinkDialogPlugin.prototype.disposeInternal = function() {
-  goog.editor.plugins.LinkDialogPlugin.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
   this.eventHandler_.dispose();
 };
 

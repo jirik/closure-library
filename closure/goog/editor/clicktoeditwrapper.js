@@ -136,7 +136,7 @@ goog.editor.ClickToEditWrapper.prototype.getOriginalDomHelper = function() {
 
 /** @override */
 goog.editor.ClickToEditWrapper.prototype.disposeInternal = function() {
-  goog.editor.ClickToEditWrapper.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
   this.exitDocument();
 
   if (this.savedCaretRange_) {

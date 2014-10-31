@@ -42,7 +42,7 @@ goog.require('goog.crypt.Hash');
  * @struct
  */
 goog.crypt.Hmac = function(hasher, key, opt_blockSize) {
-  goog.crypt.Hmac.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * The underlying hasher to calculate hash.

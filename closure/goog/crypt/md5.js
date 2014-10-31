@@ -46,7 +46,7 @@ goog.require('goog.crypt.Hash');
  * @struct
  */
 goog.crypt.Md5 = function() {
-  goog.crypt.Md5.base(this, 'constructor');
+  goog.base(this);
 
   this.blockSize = 512 / 8;
 

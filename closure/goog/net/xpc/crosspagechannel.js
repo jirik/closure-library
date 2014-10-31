@@ -61,7 +61,7 @@ goog.require('goog.userAgent');
  * @extends {goog.messaging.AbstractChannel}
  */
 goog.net.xpc.CrossPageChannel = function(cfg, opt_domHelper) {
-  goog.net.xpc.CrossPageChannel.base(this, 'constructor');
+  goog.base(this);
 
   for (var i = 0, uriField; uriField = goog.net.xpc.UriCfgFields[i]; i++) {
     if (uriField in cfg && !/^https?:\/\//.test(cfg[uriField])) {
@@ -834,7 +834,7 @@ goog.net.xpc.CrossPageChannel.prototype.disposeInternal = function() {
   delete goog.net.xpc.channels[this.name];
   goog.dispose(this.peerLoadHandler_);
   delete this.peerLoadHandler_;
-  goog.net.xpc.CrossPageChannel.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };
 
 

@@ -35,7 +35,7 @@ goog.require('goog.events.Event');
  * @final
  */
 goog.testing.fs.ProgressEvent = function(type, loaded, total) {
-  goog.testing.fs.ProgressEvent.base(this, 'constructor', type);
+  goog.base(this, type);
 
   /**
    * The number of bytes processed.

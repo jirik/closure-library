@@ -424,7 +424,7 @@ goog.graphics.SvgGraphics.prototype.getPixelSize = function() {
   if (!goog.userAgent.GECKO) {
     return this.isInDocument() ?
         goog.style.getSize(this.getElement()) :
-        goog.graphics.SvgGraphics.base(this, 'getPixelSize');
+        goog.base(this, 'getPixelSize');
   }
 
   // In Gecko, goog.style.getSize does not work for SVG elements.  We have to

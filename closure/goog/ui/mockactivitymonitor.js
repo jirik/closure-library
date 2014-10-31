@@ -32,7 +32,7 @@ goog.require('goog.ui.ActivityMonitor');
  * @final
  */
 goog.ui.MockActivityMonitor = function() {
-  goog.ui.MockActivityMonitor.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * Tracks whether an event has been fired. Used by simulateEvent.

@@ -194,7 +194,7 @@ goog.ui.MenuItem.prototype.handleMouseUp = function(e) {
     }
   }
 
-  goog.ui.MenuItem.base(this, 'handleMouseUp', e);
+  goog.base(this, 'handleMouseUp', e);
 };
 
 
@@ -240,7 +240,7 @@ goog.ui.registry.setDecoratorByClassName(goog.ui.MenuItemRenderer.CSS_CLASS,
  * @override
  */
 goog.ui.MenuItem.prototype.createDom = function() {
-  goog.ui.MenuItem.base(this, 'createDom');
+  goog.base(this, 'createDom');
   this.getRenderer().correctAriaRole(this, this.getElement());
 };
 

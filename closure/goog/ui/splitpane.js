@@ -63,7 +63,7 @@ goog.require('goog.userAgent');
  */
 goog.ui.SplitPane = function(firstComponent, secondComponent, orientation,
     opt_domHelper) {
-  goog.ui.SplitPane.base(this, 'constructor', opt_domHelper);
+  goog.base(this, opt_domHelper);
 
   /**
    * The orientation of the containers.
@@ -373,7 +373,7 @@ goog.ui.SplitPane.prototype.getElementToDecorate_ = function(rootElement,
  * @override
  */
 goog.ui.SplitPane.prototype.decorateInternal = function(element) {
-  goog.ui.SplitPane.base(this, 'decorateInternal', element);
+  goog.base(this, 'decorateInternal', element);
 
   this.setUpHandle_();
 
@@ -424,7 +424,7 @@ goog.ui.SplitPane.prototype.finishSetup_ = function() {
  * @override
  */
 goog.ui.SplitPane.prototype.enterDocument = function() {
-  goog.ui.SplitPane.base(this, 'enterDocument');
+  goog.base(this, 'enterDocument');
 
   // If position is not set in the inline style of the element, it is not
   // possible to get the element's real CSS position until the element is in
@@ -898,5 +898,5 @@ goog.ui.SplitPane.prototype.disposeInternal = function() {
   goog.dom.removeNode(this.iframeOverlay_);
   this.iframeOverlay_ = null;
 
-  goog.ui.SplitPane.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };

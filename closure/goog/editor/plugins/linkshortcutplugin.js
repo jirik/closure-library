@@ -33,7 +33,7 @@ goog.require('goog.string');
  * @final
  */
 goog.editor.plugins.LinkShortcutPlugin = function() {
-  goog.editor.plugins.LinkShortcutPlugin.base(this, 'constructor');
+  goog.base(this);
 };
 goog.inherits(goog.editor.plugins.LinkShortcutPlugin, goog.editor.Plugin);
 

@@ -35,7 +35,7 @@ goog.require('goog.ui.ColorMenuButtonRenderer');
  * @final
  */
 goog.ui.ColorButtonRenderer = function() {
-  goog.ui.ColorButtonRenderer.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * @override
@@ -68,7 +68,7 @@ goog.ui.ColorButtonRenderer.prototype.createCaption = function(content, dom) {
 
 /** @override */
 goog.ui.ColorButtonRenderer.prototype.initializeDom = function(button) {
-  goog.ui.ColorButtonRenderer.base(this, 'initializeDom', button);
+  goog.base(this, 'initializeDom', button);
   goog.dom.classlist.add(
       goog.asserts.assert(button.getElement()),
       goog.ui.ColorButtonRenderer.CSS_CLASS);

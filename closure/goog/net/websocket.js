@@ -65,7 +65,7 @@ goog.require('goog.log');
  * @extends {goog.events.EventTarget}
  */
 goog.net.WebSocket = function(opt_autoReconnect, opt_getNextReconnect) {
-  goog.net.WebSocket.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * True if the web socket should automatically reconnect or not.
@@ -440,7 +440,7 @@ goog.net.WebSocket.prototype.clearReconnectTimer_ = function() {
 
 /** @override */
 goog.net.WebSocket.prototype.disposeInternal = function() {
-  goog.net.WebSocket.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
   this.close();
 };
 

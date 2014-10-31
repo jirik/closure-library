@@ -44,7 +44,7 @@ goog.require('goog.math.Long');
  * @struct
  */
 goog.crypt.Sha2_64bit = function(numHashBlocks, initHashBlocks) {
-  goog.crypt.Sha2_64bit.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * The number of bytes that are digested in each pass of this hasher.

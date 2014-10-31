@@ -51,7 +51,7 @@ goog.require('goog.userAgent.product');
  * @implements {goog.module.AbstractModuleLoader}
  */
 goog.module.ModuleLoader = function() {
-  goog.module.ModuleLoader.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * Event handler for managing handling events.
@@ -409,7 +409,7 @@ goog.module.ModuleLoader.EventType = {
  * @final
  */
 goog.module.ModuleLoader.Event = function(type, moduleIds) {
-  goog.module.ModuleLoader.Event.base(this, 'constructor', type);
+  goog.base(this, type);
 
   /**
    * @type {Array.<string>}

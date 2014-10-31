@@ -45,7 +45,7 @@ goog.require('goog.debug.Trace');
  * @implements {goog.debug.EntryPointMonitor}
  */
 goog.debug.ErrorHandler = function(handler) {
-  goog.debug.ErrorHandler.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * Handler for exceptions, which can do logging, reporting, etc.
@@ -324,7 +324,7 @@ goog.debug.ErrorHandler.prototype.disposeInternal = function() {
   win.setTimeout = this.unwrap(win.setTimeout);
   win.setInterval = this.unwrap(win.setInterval);
 
-  goog.debug.ErrorHandler.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };
 
 

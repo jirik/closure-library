@@ -60,7 +60,7 @@ goog.require('goog.userAgent');
  * @final
  */
 goog.events.ImeHandler = function(el) {
-  goog.events.ImeHandler.base(this, 'constructor');
+  goog.base(this);
 
   /**
    * The element to listen on.
@@ -127,7 +127,7 @@ goog.events.ImeHandler.EventType = {
  * @final
  */
 goog.events.ImeHandler.Event = function(type, reason) {
-  goog.events.ImeHandler.Event.base(this, 'constructor', type);
+  goog.base(this, type);
 
   /**
    * The event that triggered this.
@@ -361,5 +361,5 @@ goog.events.ImeHandler.prototype.disposeInternal = function() {
   this.handler_.dispose();
   this.keyUpHandler_.dispose();
   this.el_ = null;
-  goog.events.ImeHandler.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 };

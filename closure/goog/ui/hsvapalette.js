@@ -166,7 +166,7 @@ goog.ui.HsvaPalette.prototype.setColorAlphaHelper_ = function(color, alpha) {
 
 /** @override */
 goog.ui.HsvaPalette.prototype.createDom = function() {
-  goog.ui.HsvaPalette.base(this, 'createDom');
+  goog.base(this, 'createDom');
 
   var dom = this.getDomHelper();
   this.aImageEl_ = dom.createDom(
@@ -184,7 +184,7 @@ goog.ui.HsvaPalette.prototype.createDom = function() {
 
 /** @override */
 goog.ui.HsvaPalette.prototype.disposeInternal = function() {
-  goog.ui.HsvaPalette.base(this, 'disposeInternal');
+  goog.base(this, 'disposeInternal');
 
   delete this.aImageEl_;
   delete this.aHandleEl_;
@@ -194,7 +194,7 @@ goog.ui.HsvaPalette.prototype.disposeInternal = function() {
 
 /** @override */
 goog.ui.HsvaPalette.prototype.updateUi = function() {
-  goog.ui.HsvaPalette.base(this, 'updateUi');
+  goog.base(this, 'updateUi');
   if (this.isInDocument()) {
     var a = this.alpha_ * 255;
     var top = this.aImageEl_.offsetTop -
@@ -218,7 +218,7 @@ goog.ui.HsvaPalette.prototype.updateInput = function() {
 
 /** @override */
 goog.ui.HsvaPalette.prototype.handleMouseDown = function(e) {
-  goog.ui.HsvaPalette.base(this, 'handleMouseDown', e);
+  goog.base(this, 'handleMouseDown', e);
   if (e.target == this.aImageEl_ || e.target == this.aHandleEl_) {
     // Setup value change listeners
     var b = goog.style.getBounds(this.valueBackgroundImageElement);
