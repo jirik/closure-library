@@ -314,7 +314,7 @@ goog.testing.fs.DirectoryEntry.prototype.remove = function() {
     }, 0, this);
     return d;
   } else if (this != this.getFileSystem().getRoot()) {
-    return goog.testing.fs.DirectoryEntry.base(this, 'remove');
+    return goog.base(this, 'remove');
   } else {
     // Root directory, do nothing.
     return goog.async.Deferred.succeed();

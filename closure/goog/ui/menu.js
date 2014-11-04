@@ -422,7 +422,7 @@ goog.ui.Menu.prototype.decorateInternal = function(element) {
 
 /** @override */
 goog.ui.Menu.prototype.handleKeyEventInternal = function(e) {
-  var handled = goog.ui.Menu.base(this, 'handleKeyEventInternal', e);
+  var handled = goog.base(this, 'handleKeyEventInternal', e);
   if (!handled) {
     // Loop through all child components, and for each menu item call its
     // key event handler so that keyboard mnemonics can be handled.

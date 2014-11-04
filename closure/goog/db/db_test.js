@@ -709,7 +709,7 @@ function testGetAllFreesCursor() {
   goog.object.extend(testCursor, origCursor);
   // We don't use goog.inherits here because we are going to be overwriting
   // goog.db.Cursor and we don't want a new "base" method as
-  // goog.db.Cursor.base(this, 'constructor') would be a call to
+  // goog.base(this, 'constructor') would be a call to
   // testCursor.base(this, 'constructor') which would be goog.db.Cursor and be
   // an infinite loop.
   testCursor.prototype = origCursor.prototype;

@@ -241,7 +241,7 @@ goog.ui.Palette.prototype.performActionInternal = function(e) {
   var item = this.getHighlightedItem();
   if (item) {
     this.setSelectedItem(item);
-    return goog.ui.Palette.base(this, 'performActionInternal', e);
+    return goog.base(this, 'performActionInternal', e);
   }
   return false;
 };

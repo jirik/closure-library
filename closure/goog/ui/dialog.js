@@ -425,7 +425,7 @@ goog.ui.Dialog.prototype.getDialogElement = function() {
  */
 goog.ui.Dialog.prototype.getBackgroundElement = function() {
   this.renderIfNoDom_();
-  return goog.ui.Dialog.base(this, 'getBackgroundElement');
+  return goog.base(this, 'getBackgroundElement');
 };
 
 

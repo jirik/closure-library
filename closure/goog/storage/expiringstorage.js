@@ -130,7 +130,7 @@ goog.storage.ExpiringStorage.prototype.set = function(
  * @override
  */
 goog.storage.ExpiringStorage.prototype.getWrapper = function(key, opt_expired) {
-  var wrapper = goog.storage.ExpiringStorage.base(this, 'getWrapper', key);
+  var wrapper = goog.base(this, 'getWrapper', key);
   if (!wrapper) {
     return undefined;
   }

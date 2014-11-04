@@ -203,7 +203,7 @@ goog.ui.MenuItem.prototype.handleKeyEventInternal = function(e) {
   if (e.keyCode == this.getMnemonic() && this.performActionInternal(e)) {
     return true;
   } else {
-    return goog.ui.MenuItem.base(this, 'handleKeyEventInternal', e);
+    return goog.base(this, 'handleKeyEventInternal', e);
   }
 };
 
@@ -255,5 +255,5 @@ goog.ui.MenuItem.prototype.getPreferredAriaRole = function() {
   if (this.isSupportedState(goog.ui.Component.State.SELECTED)) {
     return goog.a11y.aria.Role.MENU_ITEM_RADIO;
   }
-  return goog.ui.MenuItem.base(this, 'getPreferredAriaRole');
+  return goog.base(this, 'getPreferredAriaRole');
 };

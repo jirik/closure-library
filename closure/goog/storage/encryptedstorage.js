@@ -176,7 +176,7 @@ goog.storage.EncryptedStorage.prototype.set = function(
 /** @override */
 goog.storage.EncryptedStorage.prototype.getWrapper = function(
     key, opt_expired) {
-  var wrapper = goog.storage.EncryptedStorage.base(this, 'getWrapper',
+  var wrapper = goog.base(this, 'getWrapper',
                           this.hashKeyWithSecret_(key), opt_expired);
   if (!wrapper) {
     return undefined;
