@@ -167,7 +167,10 @@ goog.net.DefaultXmlHttpFactory = function() {
 goog.inherits(goog.net.DefaultXmlHttpFactory, goog.net.XmlHttpFactory);
 
 
-/** @override */
+/**
+ * @override
+ * @suppress {checkTypes}
+ */
 goog.net.DefaultXmlHttpFactory.prototype.createInstance = function() {
   var progId = this.getProgId_();
   if (progId) {
